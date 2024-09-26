@@ -169,7 +169,7 @@ input:checked + label:hover{
 
 @media (min-width: 500px) {
     .container {
-        min-width: 60vh;
+        max-width: 60vh;
     }
 
     .rating-start {
@@ -202,7 +202,7 @@ input:checked + label:hover{
 
 @media (min-width: 1440px) {
     .container {
-        min-width: 54vh;
+        max-width: 54vh;
     }
     
     .section-numbers label {
@@ -300,7 +300,7 @@ input:checked + label:hover{
 
 @media (min-width: 1440px) {
     .container {
-        min-width: 54vh;
+        max-width: 54vh;
     }
 }
 
