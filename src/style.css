@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Light-Grey-Blur: hsla(217, 12%, 63%, 0.1);
+
+    --Dark-Blue: hsl(213, 19%, 18%);
+
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    font-size: 1rem;
+
+    color: var(--White);
+    background-color: var(--Very-Dark-Blue);
+
+}
+
+main {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 46vh;
+}
+
+/* --- Rating state start  --- */
+.rating-start {
+    border-radius: 1rem;
+    padding: 1.4rem;
+    min-height: 52vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(
+        var(--Dark-Blue),
+        var(--Light-Grey-Blur)
+    );
+}
+
+.rating-start img, h1, .text, div, button{
+    margin: 0.6rem 0;
+}
+
+.rating-start img {
+    border-radius: 100%;
+    padding: 1rem;
+    max-width: 20%;
+    height: auto;
+
+    background-color: var(--Light-Grey-Blur);
+    transition: transform 0.3s ease;
+}
+
+.rating-start h1 {
+    font-weight: 700;
+}
+
+.rating-start p {
+    font-weight: 400;
+}
+
+.section-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.section-numbers input {
+    display: none;
+}
+
+.section-numbers label {
+    border-radius: 50%;
+    padding: 6%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Light-Grey-Blur);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section-numbers label:hover {
+    cursor: pointer;
+
+    color: var(--Very-Dark-Blue);
+    background-color: var(--Orange);
+}
+
+input:checked + label {
+    color: var(--Very-Dark-Blue);
+    background-color: var(--White);
+}
+
+input:checked + label:hover{
+    color: var(--Very-Dark-Blue);
+    background-color: var(--White);
+}
+
+#submit-button {
+    border-radius: 2rem;
+    border: 1px solid;
+    min-height: 3.4rem;
+
+    font-weight: 700;
+    font-size: 1.0rem;
+
+    color: var(--Very-Dark-Blue);
+    background-color: var(--Orange);
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+
+    background-color: var(--White);
+    color: var(--Very-Dark-Blue);
+}
+
+#submit-button:focus {
+    outline: 2px solid var(--Orange);
+    outline-offset: 4px;
+}
+
+#submit-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--Dark-Blue);
+    color: var(--white);
+}
+
+@media (min-width: 390px) {
+    .container {
+        max-width: 40vh;
+    }
+
+    .rating-start {
+        min-height: 42vh;
+    }
+
+    .section-numbers label{
+        padding: 7%;
+        max-width: 2rem;
+        max-height: 2rem;
+    }
+}
+
+@media (min-width: 500px) {
+    .container {
+        min-width: 60vh;
+    }
+
+    .rating-start {
+        min-height: 48vh;
+        border-radius: 2rem;
+        padding: 2rem;
+        line-height: 1.8rem;
+    }
+
+    .rating-start h1 {
+        font-size: 2rem;
+    }
+
+    .rating-start p {
+        font-size: 1.2rem;
+    }
+
+    .rating-start img, h1, .text, div, button{
+        margin: 0.8rem 0;
+    }
+
+    .section-numbers label {
+        font-size: 1.2rem;
+    }
+
+    .rating-start img {
+        max-width: 12%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        min-width: 54vh;
+    }
+    
+    .section-numbers label {
+        padding: 2rem;
+    }
+}
+/* --- Rating state end  --- */
+
+
+/*  --- Thank you state start  --- */
+.rating-end {
+    border-radius: 1rem;
+    padding: 1.4rem;
+    min-height: 52vh;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        var(--Dark-Blue),
+        var(--Light-Grey-Blur)
+    );
+}
+
+.calification-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calification-section img {
+    max-width: 84%;
+    height: auto;
+}
+
+.selected-section {
+    margin: 14% auto 0;
+    border-radius: 1rem;
+    padding: 0.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--Light-Grey-Blur);
+    color: var(--Orange);
+}
+
+.selected-section p {
+    font-weight: 300;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-section h1 {
+    margin-bottom: 1rem;
+}
+
+.text-section p {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: var(--Light-Grey);
+}
+
+@media (min-width: 500px) {
+    .rating-end {
+        min-height: 48vh;
+        border-radius: 2rem;
+        padding: 2rem;
+        line-height: 1.8rem;
+    }
+
+    .rating-end h1 {
+        font-size: 1.8rem;
+    }
+
+    .rating-end {
+        font-size: 1rem;
+    }
+
+    .selected-section{
+        padding: 0.4rem 2rem;
+
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        min-width: 54vh;
+    }
+}
+
+/* --- Thank you state end --- */
+
+.attribution {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attribution p {
+    text-align: center;
+}
+
+.attribution a {
+    color: orange;
+    text-decoration: none;
+    
+}
+
+.attribution a:hover {
+    cursor: pointer;
+    color: white;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- Rating state start -->
+        <section class="rating-start">
+          <img src="images/icon-star.svg" alt="icon star">
+          <h1>How did we do?</h1>
+          <p class="text">  
+            Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!
+          </p>
+          <div class="section-numbers">
+            <input type="radio" name="numbers" id="number-one">
+            <label class="numbers-buttons" for="number-one" aria-label="Rate 1 out of 5">
+              <p>1</p>
+            </label>
+
+            <input type="radio" name="numbers" id="number-two">
+            <label class="numbers-buttons" for="number-two" aria-label="Rate 2 out of 5">
+              <p>2</p>
+            </label>
+
+            <input type="radio" name="numbers" id="number-three">
+            <label class="numbers-buttons" for="number-three" aria-label="Rate 3 out of 5">
+              <p>3</p>
+            </label>
+
+            <input type="radio" name="numbers" id="number-four">
+            <label class="numbers-buttons" for="number-four" aria-label="Rate 4 out of 5">
+              <p>4</p>
+            </label>
+
+            <input type="radio" name="numbers" id="number-five">
+            <label class="numbers-buttons" for="number-five" aria-label="Rate 5 out of 5">
+              <p>5</p>
+            </label>
+          </div>
+
+          <button id="submit-button" aria-label="Submit your rating" role="button">S U B M I T</button>
+        </section>
+        <!-- Rating state end -->
+
+
+        <!-- Thank you state start -->
+        <section class="rating-end">
+          <div class="calification-section">
+            <img src="images/illustration-thank-you.svg" alt="Thank You Image">
+            <div class="selected-section">
+              <p>You selected <span id="rate"></span> out of 5</p>
+            </div>
+          </div>
+
+          <div class="text-section">
+            <h1>Thank you!</h1>
+            <p>  
+              We appreciate you taking the time to give a rating. If you ever need more support, 
+              don’t hesitate to get in touch!
+            </p>
+          </div>
+        </section>
+        <!-- Thank you state end -->
+      </div>
+    </main>
+    
+    <footer class="attribution">
+      <p>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/agilepanda482">Sebastian Rico Vela</a>.
+      </p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
