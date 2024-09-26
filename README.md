@@ -22,7 +22,7 @@ The challenge comes from the Frontend Mentor page.
 
 
 ### Links
-- Solution URL: [Link](https://interactiveratingcomponen-agilepanda482.netlify.app/)
+- Solution URL: [Link](https://interactiverating-agilepanda482.netlify.app/)
 
 ### Built with
 - HTML5
